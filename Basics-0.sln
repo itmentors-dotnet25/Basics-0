@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "Basics\Basics.csproj", "{952C9811-83BF-4658-B7FD-5B70DC89D5BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C09E7E9-D355-4B57-86F9-65B0044BD069}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E52D4A09-8157-46B3-AF6D-45CCCB4999C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics.Tests", "Basics.Tests\Basics.Tests.csproj", "{45756405-77E0-4B93-B44C-730BE0F95B30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{8B19F86A-FD5D-49C6-8C67-AF1851C2AA87}"
+	ProjectSection(SolutionItems) = preProject
+		Items\.editorconfig = Items\.editorconfig
+		Items\README.md = Items\README.md
+		Items\assignment-0.md = Items\assignment-0.md
+		Items\.gitignore = Items\.gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{952C9811-83BF-4658-B7FD-5B70DC89D5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952C9811-83BF-4658-B7FD-5B70DC89D5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952C9811-83BF-4658-B7FD-5B70DC89D5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952C9811-83BF-4658-B7FD-5B70DC89D5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45756405-77E0-4B93-B44C-730BE0F95B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45756405-77E0-4B93-B44C-730BE0F95B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45756405-77E0-4B93-B44C-730BE0F95B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45756405-77E0-4B93-B44C-730BE0F95B30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{952C9811-83BF-4658-B7FD-5B70DC89D5BA} = {8C09E7E9-D355-4B57-86F9-65B0044BD069}
+		{45756405-77E0-4B93-B44C-730BE0F95B30} = {E52D4A09-8157-46B3-AF6D-45CCCB4999C8}
+	EndGlobalSection
+EndGlobal
