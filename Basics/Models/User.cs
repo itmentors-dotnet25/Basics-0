@@ -2,20 +2,13 @@ namespace Basics_0.Models;
 
 public class User
 {
-    public int id;
-    public string Name;
-    private string _email;
-
-    public User()
-    {
-        id = 0;
-        Name = "Unknown";
-        _email = "";
-    }
+    private const int Id = 0;
+    private const string Name = "Unknown";
+    private string _email = string.Empty;
 
     public string GetInfo()
     {
-        return $"User: {Name}, ID: {id}";
+        return $"User: {Name}, ID: {Id},  Email: {_email}";
     }
 
     public void SetEmail(string email)

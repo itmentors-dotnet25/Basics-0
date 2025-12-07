@@ -1,18 +1,14 @@
+using System.Text;
+
 namespace Basics_0.Services;
 
 public class StringFormatter
 {
-    private string _prefix;
-
-    public StringFormatter()
-    {
-        _prefix = "DEFAULT";
-    }
+    private string _prefix = "DEFAULT";
 
     public string FormatName(string firstName, string lastName)
     {
-        var fullName = $"{firstName} {lastName}";
-        return $"{_prefix}: {fullName}";
+        return $"{_prefix}: {firstName} {lastName}";
     }
 
     public void SetPrefix(string prefix)
@@ -20,19 +16,20 @@ public class StringFormatter
         _prefix = prefix;
     }
 
-    public string CreateEmail(string userName, string domain)
+    public static string CreateEmail(string userName, string domain)
     {
-        var email = $"{userName}@{domain}";
-        return email;
+        return $"{userName}@{domain}";
     }
 
-    public string RepeatString(string input, int count)
+    public static string RepeatString(string input, int count)
     {
-        string result = "";
+        var builder = new StringBuilder(input.Length * count);
+
         for (int i = 0; i < count; i++)
         {
-            result += input;
+            builder.Append(input);
         }
-        return result;
+
+        return builder.ToString();
     }
 }
