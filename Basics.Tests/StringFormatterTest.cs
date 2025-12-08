@@ -9,7 +9,7 @@ public class StringFormatterTest
     public void FormatName_WithValidNames_ReturnsFormattedString()
     {
         // Arrange
-        var formatter = new StringFormatter();
+        StringFormatter formatter = new StringFormatter();
         string firstName = "John";
         string lastName = "Doe";
 
@@ -24,7 +24,7 @@ public class StringFormatterTest
     public void SetPrefix_ChangesPrefixInFormatting()
     {
         // Arrange
-        var formatter = new StringFormatter();
+        StringFormatter formatter = new StringFormatter();
 
         // Act
         formatter.SetPrefix("TEST");
@@ -34,4 +34,27 @@ public class StringFormatterTest
         Assert.Equal("TEST: Jane Smith", result);
     }
     
+    [Fact]
+    public void CreateEmail_WithValidValues_ReturnFormattedEmail()
+    {
+        StringFormatter formatter = new StringFormatter();
+        string userName = "John";
+        string domain = "domain.domain";
+
+        var result = formatter.CreateEmail(userName, domain);
+        
+        Assert.Equal("John@domain.domain", result);
+    }
+
+    [Fact]
+    public void RepeatString_WithValidValues_ReturnRepeatString()
+    {
+        StringFormatter formatter = new StringFormatter();
+        string input = "String";
+        int count = 5;
+
+        var result = formatter.RepeatString(input, count);
+        
+        Assert.Equal("StringStringStringStringString", result);
+    }
 };
