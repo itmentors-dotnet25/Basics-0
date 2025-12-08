@@ -3,23 +3,27 @@ namespace Basics_0.Models;
 public class User
 {
     public int id;
-    public string Name;
+    public string name;
     private string _email;
 
     public User()
     {
         id = 0;
-        Name = "Unknown";
+        name = "Unknown";
         _email = "";
     }
 
     public string GetInfo()
     {
-        return $"User: {Name}, ID: {id}";
+        return $"User: {name}, ID: {id}";
     }
 
     public void SetEmail(string email)
     {
         _email = email;
+    }
+    public string GetEmail()
+    {
+        return _email;
     }
 }
