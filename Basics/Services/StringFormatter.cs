@@ -2,16 +2,11 @@ namespace Basics_0.Services;
 
 public class StringFormatter
 {
-    private string _prefix;
-
-    public StringFormatter()
-    {
-        _prefix = "DEFAULT";
-    }
+    private string _prefix = "DEFAULT";
 
     public string FormatName(string firstName, string lastName)
     {
-        var fullName = $"{firstName} {lastName}";
+        string fullName = $"{firstName} {lastName}";
         return $"{_prefix}: {fullName}";
     }
 
@@ -22,7 +17,7 @@ public class StringFormatter
 
     public string CreateEmail(string userName, string domain)
     {
-        var email = $"{userName}@{domain}";
+        string email = $"{userName}@{domain}";
         return email;
     }
 
