@@ -2,7 +2,7 @@ namespace Basics_0.Services;
 
 public class StringFormatter
 {
-    private string _prefix = "DEFAULT";
+    private string? _prefix = "DEFAULT";
 
     public string FormatName(string firstName, string lastName)
     {
@@ -10,7 +10,7 @@ public class StringFormatter
         return $"{_prefix}: {fullName}";
     }
 
-    public void SetPrefix(string prefix)
+    public void SetPrefix(string? prefix)
     {
         _prefix = prefix;
     }

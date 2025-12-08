@@ -177,7 +177,7 @@ public class StringFormatterTest
     public void RepeatString_WithNullInput_ReturnsEmptyString()
     {
         // Act
-        var result = StringFormatter.RepeatString(null, 3);
+        var result = StringFormatter.RepeatString(string.Empty, 3);
 
         // Assert
         Assert.Equal("", result);

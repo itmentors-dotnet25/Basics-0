@@ -12,7 +12,7 @@
 
     <ItemGroup>
         <!-- Анализатор Sonar -->
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="9.27.0.93347">
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.16.1.129956">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
