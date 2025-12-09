@@ -6,6 +6,16 @@
         <RootNamespace>Basics_0</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <AnalysisLevel>latest</AnalysisLevel>
     </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Анализатор Sonar -->
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.16.1.129956">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 
 </Project>

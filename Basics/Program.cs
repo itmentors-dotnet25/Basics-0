@@ -1,3 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Hello, World!");
+using Basics_0.Services;
+
+var str = StringFormatter.RepeatString("Привет! ", 3);
+
+Console.WriteLine("Hello, World!" + " " + str);

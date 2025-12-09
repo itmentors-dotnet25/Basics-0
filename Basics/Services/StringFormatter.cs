@@ -2,12 +2,7 @@ namespace Basics_0.Services;
 
 public class StringFormatter
 {
-    private string _prefix;
-
-    public StringFormatter()
-    {
-        _prefix = "DEFAULT";
-    }
+    private string? _prefix = "DEFAULT";
 
     public string FormatName(string firstName, string lastName)
     {
@@ -15,24 +10,22 @@ public class StringFormatter
         return $"{_prefix}: {fullName}";
     }
 
-    public void SetPrefix(string prefix)
+    public void SetPrefix(string? prefix)
     {
         _prefix = prefix;
     }
 
-    public string CreateEmail(string userName, string domain)
+    public static string CreateEmail(string userName, string domain)
     {
         var email = $"{userName}@{domain}";
+
         return email;
     }
 
-    public string RepeatString(string input, int count)
+    public static string RepeatString(string input, int count)
     {
-        string result = "";
-        for (int i = 0; i < count; i++)
-        {
-            result += input;
-        }
-        return result;
+        return count <= 0 || string.IsNullOrEmpty(input)
+            ? string.Empty
+            : string.Concat(Enumerable.Repeat(input, count));
     }
 }
