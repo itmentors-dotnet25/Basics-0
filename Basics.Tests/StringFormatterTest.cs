@@ -1,4 +1,4 @@
-﻿using Basics_0.Services;
+using Basics.Services;
 using Xunit;
 
 namespace Basics.Test;
@@ -33,5 +33,32 @@ public class StringFormatterTest
         // Assert
         Assert.Equal("TEST: Jane Smith", result);
     }
-    
+
+    [Fact]
+    public void CreateEmail_WithValidInputs_ReturnsCorrectEmail()
+    {
+        // Arrange
+        string userName = "berezin";
+        string domain = "misha.ru";
+
+        // Act
+        var result = StringFormatter.CreateEmail(userName, domain);
+
+        // Assert
+        Assert.Equal("berezin@misha.ru", result);
+    }
+
+    [Fact]
+    public void RepeatString_WithPositiveCount_ReturnsRepeatedString()
+    {
+        // Arrange
+        string input = "abc";
+        int count = 3;
+
+        // Act
+        var result = StringFormatter.RepeatString(input, count);
+
+        // Assert
+        Assert.Equal("abcabcabc", result);
+    }
 };
