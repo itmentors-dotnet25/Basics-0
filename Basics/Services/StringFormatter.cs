@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Basics0.Services;
+namespace Basics.Services;
 
 public class StringFormatter
 {

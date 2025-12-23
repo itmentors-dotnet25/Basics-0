@@ -1,4 +1,4 @@
-using Basics0.Services;
+using Basics.Services;
 using Xunit;
 
 namespace Basics.Test;
