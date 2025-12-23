@@ -1,17 +1,17 @@
-namespace Basics0.Models;
+namespace Basics.Models;
 
 public class User
 {
-    public int Id { get; set; }
+    public int Id { get; }
 
-    private const string Name = "Ruslan";
+    private readonly string _name = "Ruslan";
 
     private string _email = string.Empty;
 
 
     public string GetInfo
     {
-        get => $"User: {Name}, ID: {Id}  Email: {_email}";
+        get => $"User: {_name}, ID: {Id}  Email: {_email}";
     }
 
     public void SetEmail(string email)

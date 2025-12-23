@@ -30,6 +30,8 @@ public class StringFormatter
 
     public static string RepeatString(string input, int count)
     {
+        ArgumentNullException.ThrowIfNull(input);
+
         var builder = new StringBuilder(input.Length * count);
 
         for (int i = 0; i < count; i++)
