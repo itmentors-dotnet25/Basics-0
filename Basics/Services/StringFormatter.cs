@@ -1,4 +1,6 @@
-namespace Basics_0.Services;
+using System.Text;
+
+namespace Basics.Services;
 
 public class StringFormatter
 {
@@ -20,19 +22,23 @@ public class StringFormatter
         _prefix = prefix;
     }
 
-    public string CreateEmail(string userName, string domain)
+    public static string CreateEmail(string userName, string domain)
     {
         var email = $"{userName}@{domain}";
         return email;
     }
 
-    public string RepeatString(string input, int count)
+    public static string RepeatString(string input, int count)
     {
-        string result = "";
+        ArgumentNullException.ThrowIfNull(input);
+
+        var builder = new StringBuilder(input.Length * count);
+
         for (int i = 0; i < count; i++)
         {
-            result += input;
+            builder.Append(input);
         }
-        return result;
+
+        return builder.ToString();
     }
 }
