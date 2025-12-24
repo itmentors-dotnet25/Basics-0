@@ -33,5 +33,34 @@ public class StringFormatterTest
         // Assert
         Assert.Equal("TEST: Jane Smith", result);
     }
-    
+
+    [Fact]
+    public void CreateEmail_CreatedEmailByNameAndDomain()
+    {
+        // Arrange
+        string userName = "username";
+        string domain = "domain.ru";
+        string email = userName + "@" + domain;
+
+        // Act
+        var result = StringFormatter.CreateEmail(userName, domain);
+
+        // Assert
+        Assert.Equal(email, result);
+    }
+
+    [Fact]
+    public void RepeatString_ConcatenateStringSpecifiedNumberOfTimes()
+    {
+        // Arrange
+        string text = ".net";
+        int count = 5;
+        string expectedText = ".net.net.net.net.net";
+
+        // Act
+        var result = StringFormatter.RepeatString(text, count);
+
+        // Assert
+        Assert.Equal(expectedText, result);
+    }
 };
