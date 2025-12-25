@@ -15,7 +15,7 @@ public class User
 
     public string GetInfo()
     {
-        return $"User: {_name}, ID: {Id}";
+        return $"User: {_name}, ID: {Id} Email: {_email}";
     }
 
     public void SetEmail(string email)
